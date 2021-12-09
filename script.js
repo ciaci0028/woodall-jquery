@@ -34,6 +34,11 @@ function onReady () {
     // Setter
     let messedUpText = h5Text.split("").reverse().join("");
     console.log( messedUpText );
+    $('h5').text( messedUpText );
+
+    let newPlant = $('#plantNameInput').val();
+    console.log ( $('#plantNameInput').val() );
+    $('#plantNameInput').append(`<li>${newPlant}</li>`);
 
 
     let plants = [
