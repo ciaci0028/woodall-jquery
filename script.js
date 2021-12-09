@@ -25,17 +25,28 @@ function onReady () {
         <p>
             Let me tell you...
         </p>
-    `)
+    `);
+
+    // Getter
+    let h5Text = $('h5').text();
+    console.log( h5Text );
+
+    // Setter
+    let messedUpText = h5Text.split("").reverse().join("");
+    console.log( messedUpText );
+
 
     let plants = [
         'Monstera',
         'Roses',
         'Cactus',
-    ]
+    ];
 
     for (let plant of plants) {
         $('#plantList').append(`
             <li>${plant}</li>
         `)
-    }
+    };
+
+
 }
