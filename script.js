@@ -10,6 +10,27 @@ function onReady () {
         'font-size': '28px'
     })
 
+    // Button click adds plant
+    $( '#button' ).on('click', addButton);
+
+    $( document ).on('click', '.deleteBtn', deletePlant);
+
+    function addButton() {
+        let newPlant = $('#plantNameInput').val();
+        $('#plantList').append(`
+            <li>   
+                ${newPlant}
+                <button class="deleteBtn">
+                    Delete
+                </button>
+            </li>
+        `);
+    }
+
+    function deletePlant () {
+        $('.deleteBtn').parent().remove();        
+    }
+
     // Select my plantList element
     $('#plantList').append(`<li>Bamboo</li>`);
 
@@ -27,7 +48,7 @@ function onReady () {
         </p>
     `);
 
-    // Getter
+/*     // Getter
     let h5Text = $('h5').text();
     console.log( h5Text );
 
@@ -38,7 +59,15 @@ function onReady () {
 
     let newPlant = $('#plantNameInput').val();
     console.log ( $('#plantNameInput').val() );
-    $('#plantNameInput').append(`<li>${newPlant}</li>`);
+    $('#plantNameInput').append(`
+        <li>
+            ${newPlant}
+            <button class="deleteBtn">
+                Delete
+            </button>
+        </li>
+
+    `); */
 
 
     let plants = [
@@ -49,9 +78,13 @@ function onReady () {
 
     for (let plant of plants) {
         $('#plantList').append(`
-            <li>${plant}</li>
+            <li>
+                ${plant}
+            </li>
         `)
     };
+
+
 
 
 }
