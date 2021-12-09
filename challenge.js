@@ -4,7 +4,7 @@ function onReady () {
     $('#kitty').on('click', spinKitty )
 
     let kitty = $('#kitty');
-    let silly = $('.silly')
+    let silly = $('.silly');
     function spinKitty() {
         // Spin the kitty upside down
         kitty.css(
