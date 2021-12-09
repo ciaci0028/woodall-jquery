@@ -14,6 +14,9 @@ function onReady () {
     $( '#button' ).on('click', addButton);
 
     $( document ).on('click', '.deleteBtn', deletePlant);
+    $( document ).on('click', '.growBtn', growPlant);
+
+
 
     function addButton() {
         let newPlant = $('#plantNameInput').val();
@@ -23,12 +26,19 @@ function onReady () {
                 <button class="deleteBtn">
                     Delete
                 </button>
+                <button class="growBtn">
+                    Grow Up
+                </button>
             </li>
         `);
     }
 
     function deletePlant () {
-        $('.deleteBtn').parent().remove();        
+        $(this).parent().remove();        
+    }
+
+    function growPlant () {
+        $(this).parent().addClass('bigPlant');
     }
 
     // Select my plantList element
