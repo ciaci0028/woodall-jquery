@@ -1,4 +1,6 @@
-[ ] At least 2 types of selectors
+[x] At least 2 types of selectors
 [ ] DOM Traversal
-[ ] Render HTML w/ append
-[ ] Use a getter and a setter
+[x] Render HTML w/ append
+[x] Use a 
+    [x] getter
+    [x] setter

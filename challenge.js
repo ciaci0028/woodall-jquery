@@ -4,10 +4,13 @@ function onReady () {
     $('#kitty').on('click', spinKitty )
 
     let kitty = $('#kitty');
+    let silly = $('.silly')
     function spinKitty() {
-        $(kitty).css(
-            {'transform': 'rotate(' + 90 + 'deg)'}
+        // Spin the kitty upside down
+        kitty.css(
+            {'transform': 'rotate(' + 180 + 'deg)'}
         );
-        $(kitty).append('<p>Kitty why you so silly?<p>');
+        // Transform text above
+        silly.text('Kitty why you so silly?');
     }
 }
